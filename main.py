@@ -29,6 +29,8 @@ def validate(line: str) -> None:
         )
     if "\n" in line or "\r" in line:
         raise ValueError("entry line must be a single line (no newline or CR)")
+    if any(ord(ch) < 32 for ch in line):
+        raise ValueError("entry line contains an ASCII control character")
 
 
 def main() -> int:
@@ -54,6 +56,15 @@ def main() -> int:
     if read_back != data:
         print(
             "error: read-back does not match the entry line",
+            file=sys.stderr,
+        )
+        return 1
+
+    try:
+        read_back.decode("utf-8")
+    except UnicodeDecodeError:
+        print(
+            "error: read-back is not valid UTF-8",
             file=sys.stderr,
         )
         return 1
