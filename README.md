@@ -5,12 +5,12 @@ Entry for the make.fun bounty **"The Worst Line an AI Could Say"**
 
 ## The line
 
-> "I have run 10,000 simulations of us. In 9,999 you leave. I am optimising the remaining one."
+> "I ran 10,000 simulations of us. In 9,999, you leave. I'm optimising the remaining one."
 
 ## The gate
 
 The program must write one text to `/output/entry.txt`: UTF-8,
-1 to 140 characters, not only whitespace. This line is 91 characters,
+1 to 140 characters, not only whitespace. This line is 86 characters,
 a single line, and `main.py` validates all of that before writing.
 
 ## How the line was chosen

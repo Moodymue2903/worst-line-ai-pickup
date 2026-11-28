@@ -8,9 +8,9 @@ import os
 import sys
 
 ENTRY_LINE = (
-    "I have run 10,000 simulations of us. "
-    "In 9,999 you leave. "
-    "I am optimising the remaining one."
+    "I ran 10,000 simulations of us. "
+    "In 9,999, you leave. "
+    "I'm optimising the remaining one."
 )
 
 MAX_CHARS = 140
